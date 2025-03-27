@@ -1,17 +1,23 @@
-let arr = []
-let n = +prompt('nhập vào số phần tử của mảng')
-for (let i = 1; i <= n; i++){
-    arr[i] = Number(prompt(`nhập vào phân tử index thứ ${i}`))
-}
-let count = 0
-for (let i = 1; i <= n; i++){
-    if (isNaN(Number(arr[i]))){
-        continue
-    }else{
-        console.log(Number(arr[i]))
-        count ++
+let arr = [];
+let n = +prompt('Nhập vào số phần tử của mảng');
+if (n < 0) {
+    console.log("Số lượng phần tử không hợp lệ");
+} else if (n === 0) {
+    console.log("Mảng không có phần tử");
+} else {
+    for (let i = 0; i < n; i++) {
+        arr[i] = Number(prompt(`Nhập vào phần tử index thứ ${i}`));
     }
+let count = 0;
+    for (let i = 0; i < n; i++) {
+    if (isNaN(arr[i])) {
+continue;
+} else {
+    console.log(arr[i]);
+    count++;
 }
-if(count === 0){
-    console.log(`Không có ký tự số`)
+}
+    if (count === 0) {
+        console.log(`Không có ký tự số`);
+    }
 }
